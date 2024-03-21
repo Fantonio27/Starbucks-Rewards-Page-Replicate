@@ -1,7 +1,7 @@
 @use "sass:map";
 
 $color-palette: (
-    "lightblack" : #1e3932,
+    "lightblack" : #1d3931,
     "green" : #008248,
     "darkgreen": #273731ff,
     "aqua" : #d4e9e2,
@@ -55,33 +55,31 @@ nav {
             @include display-flex(20px);
 
             li{
-                font-weight: bolder;
-                letter-spacing: 1.4px;
+                font-weight: 600;
+                letter-spacing: 1px;
                 color: map.get($color-palette, "lighblack");
+                font-size: 15px;
               
                 &:hover{
                     @extend %hover-green;
-                }
-
-                &:focus{
-         
                 }
             }
         }
     }
 
     .right-container{
-        $bl-text : map.get($color-palette, "lighblack");
-        $wt-text : map.get($color-palette, "white");
 
         @include display-flex(60px);
-        font-weight: 600;
-        color: $bl-text;
+        font-weight: 500;
         
         .location-button{
             @include display-flex(8px);
-            font-size: 16px;
-            
+
+            p{
+                font-size: 14px;
+                color: map.get($color-palette, "lighblack");
+            }
+
             &:hover{
                 @extend %hover-green;
             }
@@ -91,10 +89,10 @@ nav {
             border-radius: 20px;
             border: 1px solid map.get($color-palette, "lighblack");
             padding: 6px 15px;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 500;
             background-color: transparent;
-            color: $bl-text;
+            color: map.get($color-palette, "lighblack");
             cursor: pointer;
             transition: 0.2s linear;
         }
@@ -110,7 +108,7 @@ nav {
         button:nth-child(2){
             @extend %button-design;
             background-color: black;
-            color: $wt-text; 
+            color: map.get($color-palette, "white");; 
             margin-left: 5px;
 
             &:hover{
@@ -131,7 +129,8 @@ nav {
         margin: auto;
         color: map.get($color-palette, "white");
         font-weight: bold;
-        letter-spacing: 1.4px;
+        letter-spacing: 0.5px;
+        font-size: 15px;
     }
 }
 
@@ -152,13 +151,14 @@ header{
         margin: auto;
 
         h1{
-            font-size: 38px;
+            font-size: 36px;
             font-weight: 600;
+            line-height: 46px;
         }
 
         p{
             font-weight: 500;
-            font-size: 20px;
+            font-size: 18px;
             margin: 20px 0px;
             letter-spacing: 0.5px;
         }
@@ -167,7 +167,7 @@ header{
             background-color: #00754a;
             color: white;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 16px;
             padding: 7px 15px;
             border-radius: 20px;
             border: 0px;
@@ -176,34 +176,49 @@ header{
     }
 }
 
-%title-page {
-    font-size: 28px;
-    font-weight: 650;
-    text-align: center;
-}
+$text-color: map.get($color-palette, "lightblack");
+
 
 main{
-    color: map.get($color-palette, "lightblack");
+
+    h1{
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        color: $text-color;
+    }
+    
+    h2{
+        font-weight: 600;
+        font-size: 17px;
+        color: $text-color;
+    }
+    
+    p{
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 24px;
+        color: $text-color;
+    }
+    
+    u{
+        color: map.get($color-palette, "green");
+        cursor: pointer;
+    }
 
     .first-section{
         padding: 136px 0px;
 
         section{
-            h1{
-                @extend %title-page;
-            }
-    
             p{
                 text-align: center;
                 margin: 15px 0px 0px;
-                font-weight: 550;
             }
         } 
 
         .box-container{
-            @include display-flex(60px, center, space-evenly);
-
-            width: 64%;
+            @include display-flex(60px, center, center);
+            width: 70%;
             margin: 50px auto;
 
             section{
@@ -217,22 +232,19 @@ main{
                     height: 40px;
                     border-radius: 50px;
                     font-size: 24px;
-                    font-weight: bold;
+                    font-weight: 600;
                     margin: auto;
 
                     @include display-flex(0px, center, center);
                 }
 
-                h1{
-                    font-size: 20px;
-                    font-weight: bold;
+                h2{
                     margin: 30px 0px 20px;
+                    text-align: center;
                 }
 
                 p{
-                    font-size: 16px;
-                    line-height:24px;
-                    font-weight: 550;
+                    text-align: center;
                 }
             }
         }
@@ -241,10 +253,6 @@ main{
     .second-section{
         padding: 136px 0px;
         background-color: map.get($color-palette, "aqua");
-
-        > h1{
-            @extend %title-page;
-        }
     }
 
     .fifth-section{
@@ -258,13 +266,8 @@ main{
             padding: 80px 0px;
             .middle-container{
     
-                >h1{
-                    @extend %title-page;
-                }
-    
-                >p{
+                p{
                     text-align: center;
-                    line-height: 24px;
                 }
     
                 .box-container{
@@ -290,19 +293,17 @@ main{
     }
 
     .six-section{
-        padding: 136px 0px;
-        width: 70%;
+        padding: 100px 0px;
+        width: 50%;
         margin: auto;
 
         h1{
-            @extend %title-page;
             text-align: left;
         }
 
-        p{
-            line-height:24px; 
-            width: 47%;
-            margin-top: 20px;
+        p{ 
+            width: 75%;
+            margin-top: 15px;
         }
     }
 
@@ -317,31 +318,34 @@ main{
         .container{
             width: 76%;
             margin: auto;
-
+            
             > section 
             >p{
+                font-size: 14px;
                 line-height: 24px;
                 margin-bottom: 8px;
             }
             
             .box-container{
-
                 .section-one{
-                    @include display-flex(20px, flex-start);
+                    @include display-flex(30px, flex-start);
                     margin-top: 25px;
 
                     section{
                         flex: 1;
     
-                        h1{
-                            font-size: 16px;
+                        h3{
+                            font-weight: 600;
+                            font-size: 15px;
                             letter-spacing: 1.4px;
-                            color: rgb(110, 110, 110);
+                            color: rgb(89, 89, 89);
+                            margin-bottom: 10px;
                         }
         
                         p{
                             line-height: 24px;
-                            font-size: 15px;
+                            font-size: 14px;
+                            margin-bottom: 10px;
                         }
                     }
                 }
@@ -354,28 +358,36 @@ main{
 footer{
     .divider{
         height: 50px;
-        border-bottom: 2px solid gray;
+        border-bottom: 1px solid rgb(227, 226, 226);
     }
+
     .container{
         width: 76%;
         margin: auto;
+        margin-bottom: 150px;
 
         .top{
-            @include display-flex(40px, flex-start);
-            padding: 50px 0px;
+            @include display-flex(30px, flex-start);
+            padding: 50px 0px 20px;
+
             >div{
-                max-width: 200px;
+                width: 195px;
 
                 h1{
-                    font-size: 19px;
-                    font-weight: normal;
+                    font-size: 18px;
+                    font-weight: 400;
                 }
 
                 li{
                     margin: 25px 0px;
-                    font-size: 18px;
-                    color: #8d8d8d;
+                    font-size: 15px;
+                    color: #6c6c6c;
                     font-weight: 400;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: #000000;
+                    }
                 }
             }
             
@@ -386,8 +398,19 @@ footer{
             border-top: 2px solid $gray;
 
             .icon-group{
-                @include display-flex(10px);
+                @include display-flex(0px);
                 padding: 30px 0px;
+
+                img{
+                    cursor: pointer;
+                    border-radius: 50px;
+                    border: 7px solid white;
+                    transition: 0.3s linear;
+
+                    &:hover{
+                        border-color: #76767629;
+                    }
+                }
             }
 
             .tabs{
@@ -396,7 +419,12 @@ footer{
                 p{
                     padding: 0px 25px;
                     border-left: 2px solid #a9a9a9;
-                    font-size: 16px;
+                    font-size: 15px;
+                    cursor: pointer;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
                 }
 
                 p:nth-child(1){
@@ -406,9 +434,10 @@ footer{
             }
     
             .copy-right{
-                color: #a9a9a9;
-                font-weight: normal;
+                color: #6c6c6c;
+                font-weight: 400;
                 margin-top: 20px;
+                font-size: 14px;
             }
         }
     }
