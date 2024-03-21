@@ -6,7 +6,7 @@ $color-palette: (
     "darkgreen": #273731ff,
     "aqua" : #d4e9e2,
     "white" : #f1f8f6,
-    "khaki" : #f3f1e7,
+    "khaki" : #f2f0ea,
     "black" : #000000,
 );
 
@@ -154,6 +154,7 @@ header{
             font-size: 36px;
             font-weight: 600;
             line-height: 46px;
+            color: black;
         }
 
         p{
@@ -176,29 +177,26 @@ header{
     }
 }
 
-$text-color: map.get($color-palette, "lightblack");
-
-
 main{
 
     h1{
         font-size: 26px;
         font-weight: 600;
         text-align: center;
-        color: $text-color;
+        color: black;
     }
     
     h2{
         font-weight: 600;
         font-size: 17px;
-        color: $text-color;
+        color: map.get($color-palette, "lightblack");
     }
     
     p{
         font-weight: 500;
         font-size: 15px;
         line-height: 24px;
-        color: $text-color;
+        color: map.get($color-palette, "lightblack");
     }
     
     u{
@@ -217,19 +215,19 @@ main{
         } 
 
         .box-container{
-            @include display-flex(60px, center, center);
-            width: 70%;
+            @include display-flex(50px, center, center);
+            width: 65%;
             margin: 50px auto;
 
             section{
-
+                flex: 1;
                 $color-green: map.get($color-palette, "green");
 
                 .number-circle{
                     border: 2px solid $color-green;
                     color: $color-green;
-                    width: 40px;
-                    height: 40px;
+                    width: 45px;
+                    height: 45px;
                     border-radius: 50px;
                     font-size: 24px;
                     font-weight: 600;
@@ -251,8 +249,79 @@ main{
     }
 
     .second-section{
+        padding: 50px 0px 0px;
+        background-color: #f1f8f4;
+
+        >h1{
+            color: black;
+        }
+        .tabs{
+            @include display-flex(0px, center, center);
+            margin-top: 40px;
+
+            li{
+                padding: 15px 25px;
+                font-size: 24px;
+                font-weight: 550;
+                border-bottom: 4px solid map.get($color-palette, "green");
+                letter-spacing: 1px;
+            }
+        }
+
+        .content{
+            background-color: map.get($color-palette, "aqua");
+
+            >div{
+                @include display-flex(50px, center, center);
+                width: 40%;
+                margin: auto;
+                padding: 40px 0px;
+
+                img{
+                   width: 350px; 
+                }
+                
+                h1{
+                    font-size: 24px;
+                    text-align: left;
+                    margin-bottom: 15px;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .third-section{
         padding: 136px 0px;
-        background-color: map.get($color-palette, "aqua");
+
+        >section{
+            width: 40%;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+
+        p, h2{
+            text-align: center;
+            margin: 15px 0px;
+        }
+
+        h2{
+            margin: 30px 0px 20px;
+            font-size: 17px;
+        }
+
+        .container{
+            @include display-flex(50px, center, center);
+            width: 70%;
+            margin: auto;
+
+            img{
+                display: block;
+                margin: auto;
+                height: 100px;
+                width: 100px;
+            }
+        }
     }
 
     .fifth-section{
@@ -261,33 +330,132 @@ main{
         background-size: cover;
         
         .containers{
-            @include display-flex();
+            @include display-flex(100px, center, center);
             background-color: map.get($color-palette, "aqua");
             padding: 80px 0px;
+            height: max-content;
+            
+
             .middle-container{
-    
+                width: 45%;
+
                 p{
                     text-align: center;
+                    margin-top: 15px;
                 }
     
                 .box-container{
-                    @include display-flex(20px)
+                    @include display-flex(50px);
+                    margin: 50px 0px;
+                    section{
+
+                        img{
+                            width: 180px;
+                            display: block;
+                            margin: auto;
+                            margin-bottom: 25px;
+                        }
+
+                        p{
+                            font-size: 15px;
+                            font-weight: 400;
+                        }
+
+                    }
+                }
+
+                .join-button{
+                    background-color: map.get($color-palette, "green");
+                    color: white;
+                    padding: 7px 15px;
+                    margin: auto;
+                    display: block;
+                    border: 0px;
+                    border-radius: 20px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    transition: 0.3s linear;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: #007549;
+                    }
                 }
             }
     
             .left-container{
-                // background-image: url("./images/left.svg");
-                // img{
-                //     height: 100%;
-                // }
-        
+                img{
+                    width: 150px;
+                    height: 300px;
+                    transform: scale(2);
+                }
+
             }
     
             .right-container{
-                background-image: url("./images/right.svg");
-                width: 100px;
-                height: 100%;
-                background-color: red;
+                img{
+                    width: 150px;
+                    height: 300px;
+                    transform: scale(2);
+                }
+  
+                // background-color: red;
+            }
+        }
+    }
+
+    .forth-section{
+        padding: 50px 0px;
+        background-color: map.get($color-palette, "khaki");
+
+        >p{
+            margin: 15px auto;
+            text-align: center;
+            width: 38%;
+            display: block;
+        }
+
+        .container{
+            .row:nth-child(1){
+                border-bottom: 1px solid #d8d7d1;
+            }
+
+            .row{
+                @include display-flex(50px, flex-start, space-between);
+                width: 75%;
+                margin: auto;
+                padding: 50px 0px;
+
+                p{
+                    font-size: 14px;
+                }
+
+                >section{
+                    flex: 0.6;
+
+                    h1{
+                        text-align: left;
+                    }
+                }
+
+                .col{
+                    @include display-flex(20px, flex-start);
+                    flex: 1;
+
+                    img{
+                        width: 80px;
+                    }
+
+                    .img-b{
+                        width: 55px;
+                    }
+
+                    section{
+                        h2{
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
             }
         }
     }

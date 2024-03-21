@@ -118,6 +118,7 @@ header section h1 {
   font-size: 36px;
   font-weight: 600;
   line-height: 46px;
+  color: black;
 }
 header section p {
   font-weight: 500;
@@ -140,7 +141,7 @@ main h1 {
   font-size: 26px;
   font-weight: 600;
   text-align: center;
-  color: #1d3931;
+  color: black;
 }
 main h2 {
   font-weight: 600;
@@ -166,17 +167,20 @@ main .first-section section p {
 }
 main .first-section .box-container {
   display: flex;
-  gap: 60px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 65%;
   margin: 50px auto;
+}
+main .first-section .box-container section {
+  flex: 1;
 }
 main .first-section .box-container section .number-circle {
   border: 2px solid #008248;
   color: #008248;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50px;
   font-size: 24px;
   font-weight: 600;
@@ -194,8 +198,76 @@ main .first-section .box-container section p {
   text-align: center;
 }
 main .second-section {
-  padding: 136px 0px;
+  padding: 50px 0px 0px;
+  background-color: #f1f8f4;
+}
+main .second-section > h1 {
+  color: black;
+}
+main .second-section .tabs {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+main .second-section .tabs li {
+  padding: 15px 25px;
+  font-size: 24px;
+  font-weight: 550;
+  border-bottom: 4px solid #008248;
+  letter-spacing: 1px;
+}
+main .second-section .content {
   background-color: #d4e9e2;
+}
+main .second-section .content > div {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+  padding: 40px 0px;
+}
+main .second-section .content > div img {
+  width: 350px;
+}
+main .second-section .content > div h1 {
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 15px;
+  color: black;
+}
+main .third-section {
+  padding: 136px 0px;
+}
+main .third-section > section {
+  width: 40%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+main .third-section p, main .third-section h2 {
+  text-align: center;
+  margin: 15px 0px;
+}
+main .third-section h2 {
+  margin: 30px 0px 20px;
+  font-size: 17px;
+}
+main .third-section .container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
+}
+main .third-section .container img {
+  display: block;
+  margin: auto;
+  height: 100px;
+  width: 100px;
 }
 main .fifth-section {
   padding: 30px;
@@ -204,26 +276,110 @@ main .fifth-section {
 }
 main .fifth-section .containers {
   display: flex;
-  gap: 0px;
+  gap: 100px;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   background-color: #d4e9e2;
   padding: 80px 0px;
+  height: -moz-max-content;
+  height: max-content;
+}
+main .fifth-section .containers .middle-container {
+  width: 45%;
 }
 main .fifth-section .containers .middle-container p {
   text-align: center;
+  margin-top: 15px;
 }
 main .fifth-section .containers .middle-container .box-container {
   display: flex;
-  gap: 20px;
+  gap: 50px;
   align-items: center;
   justify-content: flex-start;
+  margin: 50px 0px;
 }
-main .fifth-section .containers .right-container {
-  background-image: url("./images/right.svg");
-  width: 100px;
-  height: 100%;
-  background-color: red;
+main .fifth-section .containers .middle-container .box-container section img {
+  width: 180px;
+  display: block;
+  margin: auto;
+  margin-bottom: 25px;
+}
+main .fifth-section .containers .middle-container .box-container section p {
+  font-size: 15px;
+  font-weight: 400;
+}
+main .fifth-section .containers .middle-container .join-button {
+  background-color: #008248;
+  color: white;
+  padding: 7px 15px;
+  margin: auto;
+  display: block;
+  border: 0px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+main .fifth-section .containers .middle-container .join-button:hover {
+  background-color: #007549;
+}
+main .fifth-section .containers .left-container img {
+  width: 150px;
+  height: 300px;
+  transform: scale(2);
+}
+main .fifth-section .containers .right-container img {
+  width: 150px;
+  height: 300px;
+  transform: scale(2);
+}
+main .forth-section {
+  padding: 50px 0px;
+  background-color: #f2f0ea;
+}
+main .forth-section > p {
+  margin: 15px auto;
+  text-align: center;
+  width: 38%;
+  display: block;
+}
+main .forth-section .container .row:nth-child(1) {
+  border-bottom: 1px solid #d8d7d1;
+}
+main .forth-section .container .row {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 75%;
+  margin: auto;
+  padding: 50px 0px;
+}
+main .forth-section .container .row p {
+  font-size: 14px;
+}
+main .forth-section .container .row > section {
+  flex: 0.6;
+}
+main .forth-section .container .row > section h1 {
+  text-align: left;
+}
+main .forth-section .container .row .col {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex: 1;
+}
+main .forth-section .container .row .col img {
+  width: 80px;
+}
+main .forth-section .container .row .col .img-b {
+  width: 55px;
+}
+main .forth-section .container .row .col section h2 {
+  margin-bottom: 15px;
 }
 main .six-section {
   padding: 100px 0px;
