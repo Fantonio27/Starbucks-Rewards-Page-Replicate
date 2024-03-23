@@ -29,7 +29,7 @@ li{
 }
 
 nav {
-    padding: 20px 0px;
+    // padding: 20px 0px;
 
     %hover-green{
         cursor: pointer;
@@ -51,18 +51,32 @@ nav {
             object-fit: contain;
         }
     
-        ul{
-            @include display-flex(20px);
+        section{
+            ul{
+                @include display-flex(25px);
+    
+                li{
+                    font-weight: 600;
+                    letter-spacing: 0.3px;
+                    color: map.get($color-palette, "lighblack");
+                    font-size: 15px;
+                    border-bottom: 6px solid transparent;
+                    padding: 35px 0px ;
 
-            li{
-                font-weight: 600;
-                letter-spacing: 1px;
-                color: map.get($color-palette, "lighblack");
-                font-size: 15px;
-              
-                &:hover{
-                    @extend %hover-green;
+                    &:hover{
+                        @extend %hover-green;
+                    }
                 }
+    
+                li:nth-child(2){
+                    border-bottom: 6px solid map.get($color-palette, "green");
+                }
+            }
+
+            .nav-line{
+                background-color: map.get($color-palette, "green");
+                height: 5px;
+                width: 100px;
             }
         }
     }
@@ -255,16 +269,33 @@ main{
         >h1{
             color: black;
         }
-        .tabs{
-            @include display-flex(0px, center, center);
-            margin-top: 40px;
 
-            li{
-                padding: 15px 25px;
-                font-size: 24px;
-                font-weight: 550;
-                border-bottom: 4px solid map.get($color-palette, "green");
-                letter-spacing: 1px;
+        .tab-container{
+            width: max-content;
+            margin: auto;
+
+            .tabs{
+                @include display-flex(0px);
+                margin-top: 60px;
+    
+                li{
+                    text-align: center;
+                    width: 110px;
+                    font-size: 24px;
+                    font-weight: 550;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                }
+            }
+
+            .line-bottom{
+                margin-top: 15px;
+                background-color: map.get($color-palette, "green");
+                height: 4px;
+                width: 110px;
+                position: relative;
+                transition: 0.3s;
+                left: 0;
             }
         }
 

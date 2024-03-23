@@ -10,15 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+    <nav id="hello">
         <div class="container">
             <div class="left-container">
                 <img src="./images/starbucks-logo-png.png" alt="starbucks-logo" class="icon">
-                <ul>
-                    <li>MENU</li>
-                    <li>REWARDS</li>
-                    <li>GIFT CARDS</li>
-                </ul>
+                <section>
+                    <ul>
+                        <li>MENU</li>
+                        <li>REWARDS</li>
+                        <li>GIFT CARDS</li>
+                    </ul>
+                    <!-- <div class="nav-line"></div> -->
+                </section>
             </div>
             
             <div class="right-container">
@@ -79,20 +82,51 @@
         <div class="second-section">
             <h1>Get your favorites for free</h1>
 
-            <ul class="tabs">
-                <li>25<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
-                <li>100<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
-                <li>200<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
-                <li>300<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
-                <li>400<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
-            </ul>
+            <section class="tab-container">
+                <ul class="tabs" id="tabs">
+                    <li onclick="activeTab(0)">25<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
+                    <li onclick="activeTab(1)">100<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
+                    <li onclick="activeTab(2)">200<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
+                    <li onclick="activeTab(3)">300<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
+                    <li onclick="activeTab(4)">400<img width="12" height="12" src="https://img.icons8.com/ios-filled/12/C8A261/star--v1.png" alt="star--v1"/></li>
+                </ul>
+                <div class="line-bottom"></div>
+            </section>
 
             <div class="content">
                 <div>
-                    <img src="./images/200.png" alt="200">
+                    <img src="./images/25.png" alt="25">
                     <section>
                         <h1>Customize your drink</h1>
                         <p>Make your drink just right with an extra espresso shot, nondairy milk or a dash of your favorite syrup.</p>
+                    </section>
+                </div>
+                <div>
+                    <img src="./images/100.png" alt="200">
+                    <section>
+                        <h1>Brewed hot or iced coffee or tea, bakery item, packaged snack and more</h1>
+                        <p>Treat yourself to an iced coffee, buttery croissant, bag of chips and more.</p>
+                    </section>
+                </div>
+                <div>
+                    <img src="./images/200.png" alt="200">
+                    <section>
+                        <h1>Handcrafted drink (Cold Brew, lattes and more) or hot breakfast</h1>
+                        <p>Turn good mornings great with a delicious handcrafted drink of your choice, breakfast sandwich or oatmeal on us.</p>
+                    </section>
+                </div>
+                <div>
+                    <img src="./images/300.png" alt="300">
+                    <section>
+                        <h1>Sandwich, protein box or at-home coffee</h1>
+                        <p>Enjoy a PM pick-me-up with a lunch sandwich, protein box or a bag of coffee—including Starbucks VIA Instant®.</p>
+                    </section>
+                </div>
+                <div>
+                    <img src="./images/400.png" alt="400">
+                    <section>
+                        <h1>Select Starbucks® merchandise</h1>
+                        <p>Take home a signature cup, drink tumbler or your choice of coffee merch up to $20.</p>
                     </section>
                 </div>
             </div>
@@ -361,5 +395,8 @@
             </div>
         </div>
     </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
+    <script src="action.js"></script>
 </body>
 </html>
