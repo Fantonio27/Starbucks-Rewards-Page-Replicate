@@ -10,8 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id="hello">
+    <nav>
         <div class="container">
+            <div class="burger-menu-container">
+                <img src="./images/starbucks-logo-png.png" alt="starbucks-logo" class="icon">
+                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/menu--v3.png" alt="menu--v3" class="burger-icon"/>
+            </div>
             <div class="left-container">
                 <img src="./images/starbucks-logo-png.png" alt="starbucks-logo" class="icon">
                 <section>
@@ -20,7 +24,6 @@
                         <li>REWARDS</li>
                         <li>GIFT CARDS</li>
                     </ul>
-                    <!-- <div class="nav-line"></div> -->
                 </section>
             </div>
             
@@ -307,8 +310,11 @@
         <div class="container">
             <div class="top">
                 <div>
-                    <section>
+                    <div class="accordion-button" onclick="accordionTab(1)">
                         <h1>About Us</h1>
+                        <span><img width="20" height="20" src="https://img.icons8.com/ios-filled/20/expand-arrow--v1.png" alt="expand-arrow--v1"/></span>
+                    </div>
+                    <section class="accordion" id="accordion-content-1">
                         <ul>
                             <li>Our Company</li>
                             <li>Our Coffee</li>
@@ -322,8 +328,11 @@
                 </div>
                
                 <div>
-                    <section>
+                    <div class="accordion-button" onclick="accordionTab(2)">
                         <h1>Careers</h1>
+                        <span><img width="20" height="20" src="https://img.icons8.com/ios-filled/20/expand-arrow--v1.png" alt="expand-arrow--v1"/></span>
+                    </div>
+                    <section class="accordion" id="accordion-content-2">
                         <ul>
                             <li>Culture and Values</li>
                             <li>Inclusion, Diversity, and Equity</li>
@@ -336,8 +345,11 @@
                 </div>
         
                 <div>
-                    <section>
+                    <div class="accordion-button" onclick="accordionTab(3)">
                         <h1>Social Impact</h1>
+                        <span><img width="20" height="20" src="https://img.icons8.com/ios-filled/20/expand-arrow--v1.png" alt="expand-arrow--v1"/></span>
+                    </div>
+                    <section class="accordion" id="accordion-content-3">
                         <ul>
                             <li>People</li>
                             <li>Planet</li>
@@ -347,8 +359,11 @@
                 </div>
                 
                 <div>
-                    <section>
+                    <div class="accordion-button" onclick="accordionTab(4)">
                         <h1>For Business Partners</h1>
+                        <span><img width="20" height="20" src="https://img.icons8.com/ios-filled/20/expand-arrow--v1.png" alt="expand-arrow--v1"/></span>
+                    </div>
+                    <section class="accordion" id="accordion-content-4">
                         <ul> 
                             <li>Landlord Support Center</li>
                             <li>Suppliers</li>
@@ -359,8 +374,11 @@
                 </div>
         
                 <div>
-                    <section>
+                    <div class="accordion-button" onclick="accordionTab(5)">
                         <h1>Order and Pick Up</h1>
+                        <span><img width="20" height="20" src="https://img.icons8.com/ios-filled/20/expand-arrow--v1.png" alt="expand-arrow--v1"/></span>
+                    </div>
+                    <section class="accordion" id="accordion-content-5">
                         <ul>
                             <li>Order on the App</li>
                             <li>Order on the Web</li>
