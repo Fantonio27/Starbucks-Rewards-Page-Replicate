@@ -492,7 +492,7 @@ footer .container .top > div .accordion-button img {
   display: none;
 }
 footer .container .top > div section li {
-  margin: 25px 0px;
+  margin-top: 20px;
   font-size: 15px;
   color: #6c6c6c;
   font-weight: 400;
@@ -663,6 +663,17 @@ footer .container .bottom .copy-right {
   }
   main .forth-section .container .row {
     width: 90%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  main .forth-section .container .row > section {
+    flex: 100%;
+  }
+  main .forth-section .container .row > section h1 {
+    font-size: 22px;
+  }
+  main .forth-section .container .row .col {
+    flex: 1;
   }
   main .fifth-section .containers .middle-container {
     width: 60%;
@@ -690,9 +701,7 @@ footer .container .bottom .copy-right {
     display: block;
   }
   footer .container .top > div section {
-    overflow: hidden;
-    height: 0px;
-    transition: 0.3s;
+    display: none;
   }
   footer .container .bottom .tabs {
     flex-direction: column;

@@ -586,7 +586,7 @@ footer{
                 section{
     
                     li{
-                        margin: 25px 0px;
+                        margin-top: 20px;
                         font-size: 15px;
                         color: #6c6c6c;
                         font-weight: 400;
@@ -834,12 +834,21 @@ $mobile-breakpoint: 480px;
             .container{
                 .row{
                     width: 90%;
+                    flex-wrap: wrap;
+                    row-gap: 20px;
 
                     >section{
-                        // flex: 1;
+                        flex: 100%;
+
+                        h1{
+                            font-size: 22px;
+                        }
+                    }
+
+                    .col{
+                        flex: 1;
                     }
                 }
-               
             }
         }
 
@@ -890,9 +899,7 @@ $mobile-breakpoint: 480px;
                     }
     
                     section{
-                        overflow: hidden;
-                        height: 0px;
-                        transition: 0.3s;
+                        display: none;
                     }
                 }    
             }

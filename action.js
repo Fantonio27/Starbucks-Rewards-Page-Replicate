@@ -26,13 +26,6 @@ function activeContent (active = 1) {
 
 function accordionTab(index){
    
-    $(".accordion").css("height", "0px");
-    if(passval.accorTab != index){
-        $(`#accordion-content-${index}`).css('height', 'auto');
-        passval.accorTab = index
-    }else{
-
-        passval.accorTab = 0
-    }
+    $(`#accordion-content-${index}`).slideToggle(400);
 }
   
