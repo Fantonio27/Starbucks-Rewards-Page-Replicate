@@ -11,7 +11,7 @@ function activeTab (index = 1) {
     
     if(passval.navTab != index){
         passval.navTab = index;
-        const total = index * 110;
+        const total = index * (window.innerWidth == 470? 94 : 110);
 
         $(".line-bottom").css( "left", `${total}px`);
 

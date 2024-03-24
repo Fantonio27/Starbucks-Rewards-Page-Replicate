@@ -101,6 +101,10 @@ nav .right-container button:nth-child(2):hover {
 }
 
 .sticky-navbar {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  justify-content: space-between;
   background-color: #273731;
   padding: 15px 0px;
   position: sticky;
@@ -114,6 +118,15 @@ nav .right-container button:nth-child(2):hover {
   font-weight: bold;
   letter-spacing: 0.5px;
   font-size: 15px;
+}
+.sticky-navbar .join-button {
+  padding: 5px 15px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  display: none;
 }
 
 header {
@@ -190,10 +203,10 @@ main .first-section .box-container {
   width: 65%;
   margin: 50px auto;
 }
-main .first-section .box-container section {
+main .first-section .box-container div {
   flex: 1;
 }
-main .first-section .box-container section .number-circle {
+main .first-section .box-container div .number-circle {
   border: 2px solid #008248;
   color: #008248;
   width: 45px;
@@ -207,11 +220,11 @@ main .first-section .box-container section .number-circle {
   align-items: center;
   justify-content: center;
 }
-main .first-section .box-container section h2 {
+main .first-section .box-container div section h2 {
   margin: 30px 0px 20px;
   text-align: center;
 }
-main .first-section .box-container section p {
+main .first-section .box-container div section p {
   text-align: center;
 }
 main .second-section {
@@ -547,9 +560,6 @@ footer .container .bottom .copy-right {
 }
 
 @media screen and (max-width: 1080px) {
-  nav {
-    background-color: lightblue;
-  }
   nav .container {
     width: 93%;
   }
@@ -622,9 +632,6 @@ footer .container .bottom .copy-right {
   }
 }
 @media screen and (max-width: 768px) {
-  nav {
-    background-color: lightcoral;
-  }
   nav .container .burger-menu-container {
     display: flex;
     gap: 0;
@@ -688,7 +695,7 @@ footer .container .bottom .copy-right {
     width: 85%;
   }
   main .seven-section .container {
-    width: 95%;
+    width: 90%;
   }
   footer .container .top {
     flex-direction: column;
@@ -713,7 +720,171 @@ footer .container .bottom .copy-right {
   }
 }
 @media screen and (max-width: 480px) {
-  nav {
-    background-color: lightgreen;
+  nav .container .burger-menu-container {
+    padding: 15px 0px;
+  }
+  nav .container .burger-menu-container img {
+    width: 45px;
+  }
+  .sticky-navbar {
+    padding: 10px 20px;
+  }
+  .sticky-navbar p {
+    width: -moz-max-content;
+    width: max-content;
+    margin: 0px;
+    font-size: 12px;
+  }
+  .sticky-navbar .join-button {
+    display: block;
+  }
+  header {
+    background-position: 42%;
+  }
+  main h1 {
+    font-size: 22px;
+  }
+  main h2 {
+    font-size: 17px;
+  }
+  main p {
+    font-size: 13px;
+  }
+  main .first-section {
+    padding: 50px 0px;
+  }
+  main .first-section .box-container {
+    flex-direction: column;
+    row-gap: 0px;
+    width: 90%;
+    margin: 20px auto;
+  }
+  main .first-section .box-container div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  main .first-section .box-container div .number-circle {
+    padding: 0px 15px;
+  }
+  main .first-section .box-container div .circle-1 {
+    padding: 0px 18px;
+  }
+  main .first-section .box-container div section h2, main .first-section .box-container div section p {
+    text-align: left;
+  }
+  main .second-section .tab-container {
+    width: 100%;
+  }
+  main .second-section .tab-container .tabs {
+    margin-top: 25px;
+  }
+  main .second-section .tab-container .tabs li {
+    width: 20%;
+    font-size: 17px;
+  }
+  main .second-section .tab-container .line-bottom {
+    width: 20%;
+  }
+  main .second-section .content > div {
+    padding-top: 20px;
+    width: 90%;
+    flex-direction: column;
+  }
+  main .second-section .content > div img {
+    width: 90%;
+  }
+  main .second-section .content > div section h1, main .second-section .content > div section p {
+    text-align: center;
+  }
+  main .second-section .content > div section h1 {
+    font-size: 18px;
+  }
+  main .third-section {
+    padding: 50px 0px;
+  }
+  main .third-section section {
+    width: 95%;
+  }
+  main .third-section .container {
+    flex-direction: column;
+    width: 90%;
+  }
+  main .third-section .container > div {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  main .third-section .container > div section p, main .third-section .container > div section h2 {
+    text-align: left;
+    margin-top: 0px;
+  }
+  main .forth-section > p {
+    width: 90%;
+  }
+  main .forth-section .container .row {
+    width: 90%;
+    row-gap: 30px;
+  }
+  main .forth-section .container .row > section {
+    flex: 100%;
+  }
+  main .forth-section .container .row > section h1 {
+    font-size: 18px;
+  }
+  main .forth-section .container .row .col {
+    flex: 100%;
+  }
+  main .forth-section .container .row .col .img-b {
+    padding: 0px 12px;
+  }
+  main .fifth-section {
+    padding: 10px;
+  }
+  main .fifth-section .containers .middle-container {
+    width: 90%;
+  }
+  main .fifth-section .containers .middle-container .box-container {
+    gap: 50px;
+    flex-direction: column;
+  }
+  main .fifth-section .containers .left-container, main .fifth-section .containers .right-container {
+    background-color: red;
+  }
+  main .fifth-section .containers .left-container img, main .fifth-section .containers .right-container img {
+    display: none;
+  }
+  main .six-section {
+    width: 90%;
+  }
+  main .six-section p {
+    width: 100%;
+  }
+  main .seven-section .container .box-container .section-one {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  footer .container .top {
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  footer .container .top > div {
+    width: 100%;
+  }
+  footer .container .top > div .accordion-button img {
+    display: block;
+  }
+  footer .container .top > div section {
+    display: none;
+  }
+  footer .container .bottom .tabs {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .container .bottom .tabs p {
+    border: 0px;
+    padding: 10px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
